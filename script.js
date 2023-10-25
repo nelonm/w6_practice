@@ -1,49 +1,29 @@
+let obj = {
+    key1: "value",
+    key2: 100,
+    key3: true,
+    key4: ["one", "two", "three"],
+    key5: {
+        nestedKey1: "nestedValue",
+        nestedKey2: 200,
+        nestedKey3: false,
+        nestedKey4: ["ein", "zwei", "drei"],
+        nestedKey5: {nestedKey1: "hello"}
+        }
+    }
 /*
-let variable = 10
-variable = 20
+    console.log(obj.key1)
+    for (let i = 0; i < obj.key4.length; i++) {
+        console.log (obj.key4[i])
+    }
 
-const variable2 = 50
-//variable2 = 100
+    obj.key4.map((value) => {
+        console.log(value)
+    })*/
 
-let array = [1, 2, 3]
-array [4, 5, 6]
+    console.log(obj.key5.nestedKey5.nestedKey1)
 
-array.push(10)
-
-console.log (array)
-
-const array2 = [40, 50, 60]
-array2.push(100)
-array2[0]= 11
-
-console.log(array2)
-
-
-const arr = [ "kiss béla", "nagy józsi", "tóth jános", "john doe"]
-
-for ( let i =0; i < arr.length; i++) {
-    console.log (arr[i])
-}
-let lettersLength = 0
-let forEachResult = arr.forEach((value, index) => {
-    //console.log("at index: ", index, " is ", value)
-    console.log(`at index: ${index} is ${value}`)
-    lettersLength += value.length // önálló visszatérési érték nincs, külső elemet módosíthat
-})
-
-let mapResult = arr.map((value, index) => {
-    console.log(`at index: ${index} is ${value}`)
-    return value.length // van saját visszatérési értéke
-})
-
-console.log( "lettersLength: ", lettersLength)
-console.log( "mapResult: ", mapResult)
-
-for (const value of arr) {
-    console.log ( `forof: ${value}`)
-}
-
-for ( let i =0; i < arr[0].length; i++) {
-    console.log (arr[0][i])
-} */
-
+    const objectKeys = Object.keys(obj)
+    objectKeys.forEach((key) => {
+        console.log(key, obj[key]) // fontos, hogy []-ben legyen!]
+    })
